@@ -1,8 +1,23 @@
 {
-  "extends": "../config/base.tsconfig.json",
-  "include": ["src"],
-  "exclude": ["dist", "build", "node_modules", "output"],
-  "compilerOptions": {
-    "types": ["vite/client"]
-  }
+    "extends": "../config/base.tsconfig.json",
+    "include": [
+        "src"
+    ],
+    "exclude": [
+        "dist",
+        "build",
+        "node_modules",
+        "output"
+    ],
+    "compilerOptions": {
+        "types": [
+            "vite/client"
+        ],
+        "composite": true,
+        "skipLibCheck": true,
+        "target": "ES2020",
+        "module": "ESNext",
+        "moduleResolution": "bundler",
+        "allowSyntheticDefaultImports": true
+    }
 }
