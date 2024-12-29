@@ -6,12 +6,13 @@
   "type": "module",
   "exports": {
     ".": {
-      "import": "./output/index.js"
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
     }
   },
   "files": [],
   "scripts": {
-    "build": "tsup ./src/index.ts --outDir output --format esm --dts >/dev/null && npm run lint-fix >/dev/null && npm run format >/dev/null",
+    "build": "unbuild",
     "lint": "eslint .",
     "lint-fix": "eslint --fix ."
   },
@@ -29,8 +30,11 @@
   },
   "devDependencies": {
     "eslint": "^9.17.0",
+    "@rad/eslint": "workspace:*",
+    "@rad/publish": "workspace:*",
     "ts-toolbelt": "^9.6.0",
     "tsup": "^8.3.5",
+    "unbuild": "^2.0.0",
     "typescript": "^5.7.2"
   }
 }
