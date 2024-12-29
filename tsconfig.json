@@ -1,7 +1,7 @@
 {
     "extends": "../config/base.tsconfig.json",
     "include": [
-        "src"
+        "src/**/*.ts",
     ],
     "exclude": [
         "dist",
@@ -13,11 +13,13 @@
         "types": [
             "vite/client"
         ],
-        "composite": true,
+        "declaration": true,
+        "declarationDir": "dist/types",
         "skipLibCheck": true,
+        "lib": ["ES2020", "DOM"],
         "target": "ES2020",
         "module": "ESNext",
         "moduleResolution": "bundler",
-        "allowSyntheticDefaultImports": true
+        "allowSyntheticDefaultImports": true,
     }
 }
