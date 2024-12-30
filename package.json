@@ -14,7 +14,7 @@
   "scripts": {
     "build": "unbuild",
     "lint": "eslint .",
-    "lint-fix": "eslint --fix ."
+    "lint:fix": "eslint --fix ."
   },
   "dependencies": {
     "@esbuild-plugins/node-modules-polyfill": "^0.2.2",
@@ -29,9 +29,9 @@
     "vitest-canvas-mock": "^0.3.3"
   },
   "devDependencies": {
-    "eslint": "^9.17.0",
     "@rad/eslint": "workspace:*",
     "@rad/publish": "workspace:*",
+    "eslint": "^9.17.0",
     "ts-toolbelt": "^9.6.0",
     "unbuild": "^2.0.0"
   }
