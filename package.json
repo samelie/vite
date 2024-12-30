@@ -14,7 +14,8 @@
   "scripts": {
     "build": "unbuild",
     "lint": "eslint .",
-    "lint:fix": "eslint --fix ."
+    "lint:fix": "eslint --fix .",
+"types": "tsc -p tsconfig.typecheck.json"
   },
   "dependencies": {
     "@esbuild-plugins/node-modules-polyfill": "^0.2.2",
