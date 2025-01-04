@@ -24,7 +24,7 @@
     "jsdom": "^25.0.1",
     "package-up": "^5.0.0",
     "urlpattern-polyfill": "^10.0.0",
-    "vite": "^5.4.11",
+    "vite": "^6.0.7",
     "vite-plugin-svgr": "^4.3.0",
     "vitest": "^2.1.8",
     "vitest-canvas-mock": "^0.3.3"
@@ -34,6 +34,6 @@
     "@rad/publish": "workspace:*",
     "eslint": "^9.17.0",
     "ts-toolbelt": "^9.6.0",
-    "unbuild": "^2.0.0"
+    "unbuild": "^3.2.0"
   }
 }
