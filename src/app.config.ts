@@ -15,6 +15,7 @@ export function defineAppConfig(
     configOverrides: UserConfig = {},
 ): UserConfigExport {
     const port = configOverrides.server?.port;
+    const host = configOverrides.server?.host;
     // when invoked on root, there are no dependencies and thus need to ensure it exists
 
     return defineConfig(configEnv => {
@@ -25,6 +26,7 @@ export function defineAppConfig(
             logLevel: "info",
             server: {
                 port,
+                host: host || "localhost",
                 hmr: { overlay: false },
             },
             preview: {
@@ -44,6 +46,8 @@ export function defineAppConfig(
             },
         } satisfies UserConfig);
         const resolvedConfig = mergeConfig(appConfig, configOverrides);
+
+        console.dir(resolvedConfig, { depth: 9 });
         return resolvedConfig;
     });
 }
