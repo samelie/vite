@@ -32,7 +32,7 @@
   "devDependencies": {
     "@rad/eslint": "workspace:*",
     "@rad/publish": "workspace:*",
-    "eslint": "^9.20.0",
+    "eslint": "^9.20.1",
     "ts-toolbelt": "^9.6.0",
     "unbuild": "^3.3.1"
   }
