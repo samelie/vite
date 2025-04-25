@@ -19,7 +19,6 @@ export const sslKeyPath = resolve(pkgRootDir, "ssl/proxy.key");
 export const sslCertPath = resolve(pkgRootDir, "ssl/proxy.cer");
 
 export function createBaseConfig() {
-    console.log(`Using ssl: ${sslKeyPath} ${sslCertPath}`);
     return defineConfig(() => {
     // May want to disable source maps for testing local dev builds
         return {
