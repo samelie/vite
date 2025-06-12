@@ -17,7 +17,6 @@ export const isRunningFromSource = !pkgRootDir.includes("node_modules");
 export const sslKeyPath = resolve(pkgRootDir, "ssl/proxy.key");
 // /** SSL cert 📜 */
 export const sslCertPath = resolve(pkgRootDir, "ssl/proxy.cer");
-
 export function createBaseConfig() {
     return defineConfig(() => {
     // May want to disable source maps for testing local dev builds
