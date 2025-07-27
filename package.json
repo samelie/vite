@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@esbuild-plugins/node-modules-polyfill": "^0.2.2",
-    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/jest-dom": "^6.6.4",
     "@vitejs/plugin-vue": "^5.2.1",
     "jsdom": "^26.1.0",
     "package-up": "^5.0.0",
