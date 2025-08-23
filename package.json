@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@esbuild-plugins/node-modules-polyfill": "^0.2.2",
-    "@testing-library/jest-dom": "^6.7.0",
+    "@testing-library/jest-dom": "^6.8.0",
     "@vitejs/plugin-vue": "^5.2.1",
     "jsdom": "^26.1.0",
     "package-up": "^5.0.0",
@@ -32,7 +32,7 @@
   "devDependencies": {
     "@rad/eslint": "workspace:*",
     "@rad/publish": "workspace:*",
-    "eslint": "^9.33.0",
+    "eslint": "^9.34.0",
     "ts-toolbelt": "^9.6.0",
     "typescript": "^5.9.2",
     "unbuild": "^3.6.1"
