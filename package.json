@@ -15,7 +15,8 @@
     "build": "unbuild",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "types": "tsc -p tsconfig.typecheck.json"
+    "types": "tsc -p tsconfig.typecheck.json",
+    "knip": "knip"
   },
   "dependencies": {
     "@esbuild-plugins/node-modules-polyfill": "^0.2.2",
@@ -35,6 +36,7 @@
     "eslint": "^9.36.0",
     "ts-toolbelt": "^9.6.0",
     "typescript": "^5.9.2",
-    "unbuild": "^3.6.1"
+    "unbuild": "^3.6.1",
+    "@rad/config": "workspace:*"
   }
 }
