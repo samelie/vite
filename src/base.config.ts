@@ -10,8 +10,8 @@ import { defineConfig } from "vite";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 export const pkgRootDir =
-  process.env.PKG_DIR ??
-  parse(packageUpSync({ cwd: join(__dirname, "../..") }) ?? "").dir;
+    process.env.PKG_DIR ??
+    parse(packageUpSync({ cwd: join(__dirname, "../..") }) ?? "").dir;
 export const isRunningFromSource = !pkgRootDir.includes("node_modules");
 /** SSL key 🔑 */
 export const sslKeyPath = resolve(pkgRootDir, "ssl/proxy.key");
