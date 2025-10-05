@@ -34,7 +34,7 @@
     "@rad/config": "workspace:*",
     "@rad/eslint": "workspace:*",
     "@rad/publish": "workspace:*",
-    "eslint": "^9.36.0",
+    "eslint": "^9.37.0",
     "ts-toolbelt": "^9.6.0",
     "typescript": "^5.9.3",
     "unbuild": "^3.6.1"
