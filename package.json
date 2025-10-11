@@ -33,7 +33,7 @@
   "devDependencies": {
     "@rad/config": "workspace:*",
     "@rad/eslint": "workspace:*",
-    "@rad/publish": "workspace:*",
+    "@rad/build-configs": "workspace:*",
     "eslint": "^9.37.0",
     "ts-toolbelt": "^9.6.0",
     "typescript": "^5.9.3",
