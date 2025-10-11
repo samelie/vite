@@ -31,12 +31,13 @@
     "vitest-canvas-mock": "^0.3.3"
   },
   "devDependencies": {
+    "@rad/build-configs": "workspace:*",
     "@rad/config": "workspace:*",
     "@rad/eslint": "workspace:*",
-    "@rad/build-configs": "workspace:*",
     "eslint": "^9.37.0",
     "ts-toolbelt": "^9.6.0",
     "typescript": "^5.9.3",
     "unbuild": "^3.6.1"
-  }
+  },
+  "engines": ">= 22"
 }
