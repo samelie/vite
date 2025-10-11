@@ -33,7 +33,7 @@
     "vitest-canvas-mock": "^0.3.3"
   },
   "devDependencies": {
-    "@rad/build-configs": "workspace:*",
+    "@adddog/build-configs": "workspace:*",
     "@rad/config": "workspace:*",
     "@rad/eslint": "workspace:*",
     "eslint": "^9.37.0",
