@@ -36,7 +36,7 @@
     "@adddog/build-configs": "workspace:*",
     "@adddog/eslint": "workspace:*",
     "@rad/config": "workspace:*",
-"@adddog/config-defaults": "workspace:*",
+"@adddog/config-defaults": "^0.0.3",
     "eslint": "^9.37.0",
     "ts-toolbelt": "^9.6.0",
     "typescript": "^5.9.3",
