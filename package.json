@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "@adddog/build-configs": "workspace:*",
-    "@adddog/config-defaults": "^0.0.4",
+    "@adddog/config-defaults": "workspace:*",
     "@adddog/eslint": "workspace:*",
     "@rad/config": "workspace:*",
     "eslint": "^9.37.0",
