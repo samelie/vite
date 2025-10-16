@@ -20,7 +20,7 @@ export function defineAppConfig(
 
     return defineConfig(configEnv => {
         const baseConfig = createBaseConfig();
-        const plugins = [svgr(), vue()] as PluginOption[];
+        const plugins = [] as PluginOption[];
         const appConfig = mergeConfig(baseConfig(configEnv), {
             plugins,
             logLevel: "info",
