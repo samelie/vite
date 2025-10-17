@@ -28,7 +28,7 @@ export function createBaseConfig() {
             },
             resolve: {
                 alias: {
-                    "@": resolve(pkgRootDir, "packages/design-system", "./src"),
+                    "@": resolve(pkgRootDir, "packages/shadcn-vue-design-system", "./src"),
                 },
             },
             optimizeDeps: {
