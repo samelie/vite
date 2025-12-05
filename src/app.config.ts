@@ -1,9 +1,7 @@
 import type { PluginOption, UserConfig, UserConfigExport } from "vite";
 import { cpus } from "node:os";
 import process from "node:process";
-import vue from "@vitejs/plugin-vue";
 import { defineConfig, mergeConfig } from "vite";
-import svgr from "vite-plugin-svgr";
 
 import { createBaseConfig } from "./base.config";
 
