@@ -1,8 +1,6 @@
-import type { InlineConfig } from "vitest";
 import { join } from "node:path";
-
 import { fileURLToPath } from "node:url";
-import { defineConfig, mergeConfig } from "vite";
+import { defineConfig, mergeConfig } from "vitest/config";
 
 import { createBaseConfig } from "./base.config";
 
@@ -19,7 +17,7 @@ function getSetupFiles(): string[] {
  */
 export default defineConfig(configEnv => {
     const baseConfig = createBaseConfig();
-    return mergeConfig(baseConfig(configEnv), {
+    return mergeConfig({
         resolve: {
             // https://vitejs.dev/config/shared-options.html#resolve-conditions
             // This tells vitest to look for the entrypoint here. Allows pkg to publish the correct fields.
@@ -38,7 +36,6 @@ export default defineConfig(configEnv => {
             passWithNoTests: true,
             forceRerunTriggers: ["apps/**/*", "packages/**/*"],
             isolate: true,
-            // @ts-expect-error -- not documented
             outputTruncateLength: 600,
             outputDiffLines: 400,
             globals: true,
@@ -54,6 +51,6 @@ export default defineConfig(configEnv => {
                 "**/public/**",
             ],
             environment: "jsdom",
-        } satisfies InlineConfig,
-    });
+        },
+    }, baseConfig(configEnv));
 });

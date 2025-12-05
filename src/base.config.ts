@@ -1,22 +1,9 @@
 import type { UserConfig } from "vite";
-import { readFileSync } from "node:fs";
-import { join, parse, resolve } from "node:path";
 import process from "node:process";
 
-import { fileURLToPath } from "node:url";
 import { NodeModulesPolyfillPlugin } from "@esbuild-plugins/node-modules-polyfill";
-import { packageUpSync } from "package-up";
 import { defineConfig } from "vite";
 
-const __dirname = fileURLToPath(new URL(".", import.meta.url));
-export const pkgRootDir =
-    process.env.PKG_DIR ??
-    parse(packageUpSync({ cwd: join(__dirname, "../..") }) ?? "").dir;
-export const isRunningFromSource = !pkgRootDir.includes("node_modules");
-/** SSL key 🔑 */
-export const sslKeyPath = resolve(pkgRootDir, "ssl/proxy.key");
-// /** SSL cert 📜 */
-export const sslCertPath = resolve(pkgRootDir, "ssl/proxy.cer");
 export function createBaseConfig() {
     return defineConfig(() => {
     // May want to disable source maps for testing local dev builds
@@ -25,11 +12,6 @@ export function createBaseConfig() {
             // If an env var is required for a dependency, add it here.
             define: {
                 "process.env.NODE_DEBUG": process.env.NODE_DEBUG,
-            },
-            resolve: {
-                alias: {
-                    "@": resolve(pkgRootDir, "packages/shadcn-vue-design-system", "./src"),
-                },
             },
             optimizeDeps: {
                 esbuildOptions: {
@@ -46,10 +28,6 @@ export function createBaseConfig() {
                     // When needing to load a module for development outside of
                     // the root.
                     strict: false,
-                },
-                https: {
-                    key: readFileSync(sslKeyPath, "utf-8"),
-                    cert: readFileSync(sslCertPath, "utf-8"),
                 },
             },
             css: {
