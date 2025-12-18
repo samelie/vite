@@ -43,6 +43,13 @@
                 "../../packages/vite/src/index",
                 "../../../packages/vite/src/index"
             ],
+            "@rad/logging": [
+                "./packages/logging/src/index",
+                "../logging/src/index",
+                "../packages/logging/src/index",
+                "../../packages/logging/src/index",
+                "../../../packages/logging/src/index"
+            ],
             "@adddog/build-configs/*": [
                 "./packages/publish/src/*",
                 "../publish/src/*",
