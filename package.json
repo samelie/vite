@@ -42,7 +42,7 @@
   "devDependencies": {
     "@adddog/build-configs": "^0.0.5",
     "@rad/config": "workspace:*",
-    "eslint": "^9.39.2",
+    "eslint": "^10.0.0",
     "ts-toolbelt": "^9.6.0",
     "typescript": "^5.9.3",
     "unbuild": "^3.6.1"

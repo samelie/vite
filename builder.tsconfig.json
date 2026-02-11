@@ -14,8 +14,8 @@
         "useDefineForClassFields": true,
         "module": "ESNext",
         "lib": [
-            "ES2020",
-            "DOM"
+            "es2020",
+            "dom"
         ],
         "skipLibCheck": true,
         "moduleResolution": "bundler",
@@ -157,7 +157,6 @@
         "dist",
         "build",
         "node_modules",
-        "output",
-        "dist/types"
+        "output"
     ]
 }
