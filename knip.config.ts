@@ -5,20 +5,26 @@ import { defineKnipConfig } from "@adddog/monorepo-consistency";
 export default defineKnipConfig({
     entry: ["src/index.ts"],
     project: ["src/**/*.ts"],
+    // WHY: used in scripts but not in devDeps (hoisted)
     ignoreBinaries: ["knip", "tsx"],
     ignoreDependencies: [
+        // WHY: tooling config dep, not imported in src
         "@rad/config",
-        "ts-toolbelt",
-        // Optional vite plugins exported for consumers
+        // WHY: used in ignored setup-vitest.ts
         "@testing-library/jest-dom",
+        // WHY: re-exported as dep for consuming packages, not imported in src
         "@vitejs/plugin-vue",
+        // WHY: used in ignored setup-vitest.ts
         "urlpattern-polyfill",
+        // WHY: re-exported as dep for consuming packages, not imported in src
         "vite-plugin-svgr",
+        // WHY: used in ignored setup-vitest.ts
         "vitest-canvas-mock",
     ],
     ignore: [
-        // Vitest setup - referenced from vitest configs
+        // WHY: vitest setup referenced from consumer vitest configs
         "src/setup-vitest.ts",
+        // WHY: type-only file referenced by tsconfig
         "src/types.ts",
     ],
 });
