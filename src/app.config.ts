@@ -3,7 +3,7 @@ import { cpus } from "node:os";
 import process from "node:process";
 import { defineConfig, mergeConfig } from "vite";
 
-import { createBaseConfig } from "./base.config";
+import { createBaseConfig } from "./base.config.ts";
 
 /**
  * Define vite.config to be used for "apps"
