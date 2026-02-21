@@ -1,5 +1,45 @@
 {
-    "extends": "../config/base.tsconfig.json",
+    "compilerOptions": {
+        "resolveJsonModule": true,
+        "strictNullChecks": true,
+        "esModuleInterop": true,
+        "verbatimModuleSyntax": true,
+        "skipDefaultLibCheck": true,
+        "exactOptionalPropertyTypes": false,
+        "noUncheckedIndexedAccess": true,
+        "noErrorTruncation": true,
+        "traceResolution": false,
+        "noPropertyAccessFromIndexSignature": false,
+        "target": "ES2020",
+        "useDefineForClassFields": true,
+        "module": "ESNext",
+        "lib": [
+            "ES2022",
+            "DOM",
+            "DOM.Iterable",
+            "WebWorker",
+            "esnext.asynciterable"
+        ],
+        "skipLibCheck": true,
+        "moduleResolution": "bundler",
+        "allowImportingTsExtensions": false,
+        "isolatedModules": true,
+        "moduleDetection": "force",
+        "noEmit": false,
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noFallthroughCasesInSwitch": true,
+        "noUncheckedSideEffectImports": true,
+        "erasableSyntaxOnly": true,
+        "types": [
+            "vite/client",
+            "vitest/globals"
+        ],
+        "declaration": true,
+        "declarationDir": "dist/types",
+        "allowSyntheticDefaultImports": true
+    },
     "include": [
         "src/**/*.ts"
     ],
@@ -9,17 +49,15 @@
         "node_modules",
         "output"
     ],
-    "compilerOptions": {
-        "types": [
-            "vite/client"
+    "watchOptions": {
+        "excludeDirectories": [
+            "**/node_modules",
+            "build",
+            "dist"
         ],
-        "declaration": true,
-        "declarationDir": "dist/types",
-        "skipLibCheck": true,
-        "lib": ["ES2020", "DOM"],
-        "target": "ES2020",
-        "module": "ESNext",
-        "moduleResolution": "bundler",
-        "allowSyntheticDefaultImports": true,
+        "fallbackPolling": "dynamicPriority",
+        "synchronousWatchDirectory": true,
+        "watchDirectory": "UseFsEvents",
+        "watchFile": "UseFsEventsOnParentDirectory"
     }
 }
