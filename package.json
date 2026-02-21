@@ -1,23 +1,29 @@
 {
-  "name": "@rad/vite",
-  "version": "0.0.0",
-  "private": true,
+  "name": "@adddog/vite",
+  "version": "0.0.1",
   "description": "",
   "type": "module",
+  "homepage": "https://github.com/samelie/vite#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/samelie/vite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/samelie/vite/issues"
+  },
   "exports": {
     ".": {
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
+      "import": "./src/index.ts"
     },
     "./app.config": {
-      "import": "./dist/app.config.mjs",
-      "types": "./dist/app.config.d.ts"
+      "import": "./src/app.config.ts"
     },
     "./test.config": {
-      "import": "./dist/test.config.mjs",
-      "types": "./dist/test.config.d.ts"
+      "import": "./src/test.config.ts"
     }
   },
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
   "files": [
     "dist"
   ],
@@ -28,7 +34,11 @@
     "types": "tsc -p tsconfig.typecheck.json",
     "test": "echo '⚠️⚠️⚠️no test vitest --watch=false'",
     "dev": "tsx src/index.ts",
-    "knip": "knip"
+    "knip": "knip",
+    "release": "bumpp --yes --no-push --no-tag --release patch",
+    "prepublishOnly": "pnpm run lint && pnpm run types && pnpm run build",
+    "prepack": "pnpm run prepublishOnly",
+    "version:patch": "npm version patch --no-git-tag-version"
   },
   "dependencies": {
     "@esbuild-plugins/node-modules-polyfill": "^0.2.2",
@@ -42,11 +52,36 @@
     "vitest-canvas-mock": "^1.1.3"
   },
   "devDependencies": {
-    "@adddog/build-configs": "^0.0.5",
+    "@adddog/build-configs": "workspace:*",
     "@adddog/monorepo-consistency": "workspace:*",
+    "bumpp": "^10.4.1",
     "eslint": "^10.0.0",
     "typescript": "^5.9.3",
     "unbuild": "^3.6.1"
   },
-  "engines": ">= 22"
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "exports": {
+      ".": {
+        "import": "./dist/index.mjs",
+        "types": "./dist/index.d.ts"
+      },
+      "./app.config": {
+        "import": "./dist/app.config.mjs",
+        "types": "./dist/app.config.d.ts"
+      },
+      "./test.config": {
+        "import": "./dist/test.config.mjs",
+        "types": "./dist/test.config.d.ts"
+      }
+    },
+    "main": "./dist/index.mjs",
+    "types": "./dist/index.d.ts"
+  },
+  "engines": {
+    "node": ">= 22",
+    "pnpm": ">= 10",
+    "npm": ">= 11"
+  }
 }
