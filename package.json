@@ -18,7 +18,9 @@
       "types": "./dist/test.config.d.ts"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "unbuild",
     "lint": "eslint .",
@@ -41,7 +43,7 @@
   },
   "devDependencies": {
     "@adddog/build-configs": "^0.0.5",
-    "@rad/config": "workspace:*",
+    "@adddog/monorepo-consistency": "workspace:*",
     "eslint": "^10.0.0",
     "typescript": "^5.9.3",
     "unbuild": "^3.6.1"
