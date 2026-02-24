@@ -2,7 +2,7 @@ import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { defineConfig, mergeConfig } from "vitest/config";
 
-import { createBaseConfig } from "./base.config.ts";
+import { createBaseConfig } from "./base.config";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
