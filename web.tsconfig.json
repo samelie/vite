@@ -7,6 +7,7 @@
         "declarationDir": "dist/types",
         "target": "ES2020",
         "module": "ESNext",
-        "allowSyntheticDefaultImports": true
+        "allowSyntheticDefaultImports": true,
+        "allowImportingTsExtensions": true
     }
 }
