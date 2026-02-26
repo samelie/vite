@@ -13,17 +13,20 @@
   },
   "exports": {
     ".": {
-      "import": "./src/index.ts"
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
     },
     "./app.config": {
-      "import": "./src/app.config.ts"
+      "import": "./dist/app.config.mjs",
+      "types": "./dist/app.config.d.ts"
     },
     "./test.config": {
-      "import": "./src/test.config.ts"
+      "import": "./dist/test.config.mjs",
+      "types": "./dist/test.config.d.ts"
     }
   },
-  "main": "./src/index.ts",
-  "types": "./src/index.ts",
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
@@ -36,8 +39,7 @@
     "dev": "tsx src/index.ts",
     "knip": "knip",
     "release": "bumpp --yes --no-push --no-tag --release patch",
-    "prepublishOnly": "pnpm run types && pnpm run build",
-    "prepack": "pnpm run prepublishOnly",
+    "prepare": "unbuild",
     "version:patch": "npm version patch --no-git-tag-version"
   },
   "dependencies": {
@@ -61,23 +63,7 @@
   },
   "publishConfig": {
     "access": "public",
-    "registry": "https://registry.npmjs.org/",
-    "exports": {
-      ".": {
-        "import": "./dist/index.mjs",
-        "types": "./dist/index.d.ts"
-      },
-      "./app.config": {
-        "import": "./dist/app.config.mjs",
-        "types": "./dist/app.config.d.ts"
-      },
-      "./test.config": {
-        "import": "./dist/test.config.mjs",
-        "types": "./dist/test.config.d.ts"
-      }
-    },
-    "main": "./dist/index.mjs",
-    "types": "./dist/index.d.ts"
+    "registry": "https://registry.npmjs.org/"
   },
   "engines": {
     "node": ">= 22",
