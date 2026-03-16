@@ -1,7 +1,6 @@
 import type { UserConfig } from "vite";
 import process from "node:process";
 
-import { NodeModulesPolyfillPlugin } from "@esbuild-plugins/node-modules-polyfill";
 import { defineConfig } from "vite";
 
 export function createBaseConfig() {
@@ -12,11 +11,6 @@ export function createBaseConfig() {
             // If an env var is required for a dependency, add it here.
             define: {
                 "process.env.NODE_DEBUG": process.env.NODE_DEBUG,
-            },
-            optimizeDeps: {
-                esbuildOptions: {
-                    plugins: [NodeModulesPolyfillPlugin()],
-                },
             },
             build: {
                 sourcemap: false,

@@ -43,18 +43,17 @@
     "version:patch": "npm version patch --no-git-tag-version"
   },
   "dependencies": {
-    "@esbuild-plugins/node-modules-polyfill": "^0.2.2",
     "@testing-library/jest-dom": "^6.9.1",
-    "jsdom": "^28.1.0",
+    "jsdom": "^29.0.0",
     "urlpattern-polyfill": "^10.1.0",
-    "vite": "^7.3.1",
-    "vitest": "^4.0.18",
+    "vite": "^8.0.0",
+    "vitest": "^4.1.0",
     "vitest-canvas-mock": "^1.1.3"
   },
   "devDependencies": {
     "@adddog/build-configs": "workspace:*",
     "@adddog/monorepo-consistency": "workspace:*",
-    "bumpp": "^10.4.1",
+    "bumpp": "^11.0.1",
     "eslint": "^10.0.3",
     "typescript": "^5.9.3",
     "unbuild": "^3.6.1"

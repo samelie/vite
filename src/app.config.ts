@@ -1,6 +1,4 @@
 import type { PluginOption, UserConfig, UserConfigExport } from "vite";
-import { cpus } from "node:os";
-import process from "node:process";
 import { defineConfig, mergeConfig } from "vite";
 
 import { createBaseConfig } from "./base.config";
@@ -29,18 +27,6 @@ export function defineAppConfig(
             },
             preview: {
                 ...(port !== undefined && { port }),
-            },
-            build: {
-                rollupOptions: {
-                    ...(process.env.CI && { cache: false }),
-                    // Based on https://github.com/vitejs/vite/issues/2433#issuecomment-1422127051
-                    // helps reduce memory usage in CI which was OOM-ing (default value is 20)
-                    maxParallelFileOps: Math.max(1, cpus().length - 1),
-                    output: {
-                        // https://rollupjs.org/guide/en/#outputmanualchunks
-                        manualChunks: {},
-                    },
-                },
             },
         } satisfies UserConfig);
         const resolvedConfig = mergeConfig(appConfig, configOverrides);
