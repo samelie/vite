@@ -8,6 +8,7 @@ export default defineKnipConfig({
 }, {
     ignoreDependencies: [
         "@adddog/monorepo-consistency",
+        "@adddog/build-configs",
     ],
     ignoreBinaries: [
         "knip",
