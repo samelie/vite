@@ -1,5 +1,11 @@
 # @adddog/vite
 
+## 0.0.9
+
+### Patch Changes
+
+- 74bea2f: Remove stray console.dir from app config
+
 ## 0.0.8
 
 ### Patch Changes
