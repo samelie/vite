@@ -30,8 +30,6 @@ export function defineAppConfig(
             },
         } satisfies UserConfig);
         const resolvedConfig = mergeConfig(appConfig, configOverrides);
-
-        console.dir(resolvedConfig, { depth: 9 });
         return resolvedConfig;
     });
 }
