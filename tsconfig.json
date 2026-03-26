@@ -18,8 +18,7 @@
             "ES2022",
             "DOM",
             "DOM.Iterable",
-            "WebWorker",
-            "esnext.asynciterable"
+            "WebWorker"
         ],
         "skipLibCheck": true,
         "moduleResolution": "bundler",
@@ -34,8 +33,7 @@
         "noUncheckedSideEffectImports": true,
         "erasableSyntaxOnly": true,
         "types": [
-            "vite/client",
-            "vitest/globals"
+            "vite/client"
         ],
         "declaration": true,
         "declarationDir": "dist/types",
