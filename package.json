@@ -54,7 +54,7 @@
     "@adddog/build-configs": "workspace:*",
     "@adddog/monorepo-consistency": "workspace:*",
     "bumpp": "^11.0.1",
-    "eslint": "^10.1.0",
+    "eslint": "^10.2.0",
     "typescript": "^6.0.2",
     "unbuild": "^3.6.1"
   },
