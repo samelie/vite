@@ -55,7 +55,7 @@
     "@adddog/monorepo-consistency": "workspace:*",
     "@typescript/native-preview": "beta",
     "bumpp": "^11.1.0",
-    "eslint": "^10.3.0",
+    "eslint": "^10.4.0",
     "unbuild": "^3.6.1"
   },
   "publishConfig": {
